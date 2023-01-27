@@ -10,10 +10,24 @@
 	)
 )
 
+(deflisten workspaces :initial "[]" "bash ~/.config/eww/scripts/get-workspaces.sh")
+(deflisten current_workspace :initial "1" "bash ~/.config/eww/scripts/get-active-workspace.sh")
 (defwidget workspaces []
-	(literal :content workspace))
-(deflisten workspace "./scripts/getWorkspaces.sh")
-
+  (eventbox :onscroll "bash ~/.config/eww/scripts/change-active-workspaces.sh {} ${current_workspace}"
+    (box :space-evenly false
+        :orientation "h"
+        :halign "center"
+        :class "ws"
+      (for workspace in workspaces
+        (eventbox :onclick "hyprctl dispatch workspace ${workspace.id}"
+          (box :class "workspace-entry ${workspace.id == current_workspace ? "current" : ""} ${workspace.windows > 0 ? "occupied" : "empty"}"
+            (label :text "")
+            )
+          )
+        )
+      )
+    )
+  )
 (defwidget time []
 	(box :orientation "h"
 		:class "time"
@@ -67,7 +81,7 @@
 			:onclick "sh ./scripts/openNotificationCenter.sh &"
 			:tooltip "Notification Center"
 			:style "margin: 0em .25em 0em .75em;"
-			"${dunst_count != 0 ? '' : ''}"
+			"${dunst_count != 0 ? '󱈸' : ''}"
 		)
 	)
 )
