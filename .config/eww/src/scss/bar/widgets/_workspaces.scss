@@ -10,13 +10,14 @@
         padding: .25em .5em .25em .25em;
 	    margin: .15em .5em .15em .5em;
 	    border-radius: 10px;
-	    background-color: $lighter-background;
+	    // color: $mauve;
     }
 
     .workspace-entry--empty {
         padding: .25em .5em .25em .25em;
 	    margin: .15em .5em .15em .5em;
 	    border-radius: 12px;
+        color: $lighter-background;
     }
 
 
@@ -24,13 +25,14 @@
         padding: .25em .5em .25em .25em;
 	    margin: .15em .5em .15em .5em;
 	    border-radius: 12px;
-	    background-color: $maroon;
+	    color: $maroon;
     }
 
     .workspace-entry-current-empty {
         padding: .25em .5em .25em .25em;
 	    margin: .15em .5em .15em .5em;
 	    border-radius: 12px;
+        color: $lighter-background;
     }
 
 }
