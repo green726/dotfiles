@@ -9,5 +9,5 @@
 	:windowtype "dock"
 	:wm-ignore false
     :exclusive true
-    :focusable true
+    :focusable false
 	(bar))

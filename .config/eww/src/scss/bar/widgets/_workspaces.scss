@@ -4,11 +4,33 @@
 	margin: .5em .5em .5em .5em;
 	padding: .25em .5em .25em .5em;
 	border-radius: 12px;
-	// border: 2px solid $lighter-background;
 	background-color: $darker-background;
 
-    .workspace-entry {
-	    padding: .25em .25em .25em .25em;
-	    margin: .5em .5em .5em .5em;
+    .workspace-entry--occupied {
+        padding: .25em .5em .25em .25em;
+	    margin: .15em .5em .15em .5em;
+	    border-radius: 10px;
+	    background-color: $lighter-background;
     }
+
+    .workspace-entry--empty {
+        padding: .25em .5em .25em .25em;
+	    margin: .15em .5em .15em .5em;
+	    border-radius: 12px;
+    }
+
+
+    .workspace-entry-current-occupied {
+        padding: .25em .5em .25em .25em;
+	    margin: .15em .5em .15em .5em;
+	    border-radius: 12px;
+	    background-color: $maroon;
+    }
+
+    .workspace-entry-current-empty {
+        padding: .25em .5em .25em .25em;
+	    margin: .15em .5em .15em .5em;
+	    border-radius: 12px;
+    }
+
 }
