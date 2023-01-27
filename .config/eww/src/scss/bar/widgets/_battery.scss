@@ -1,0 +1,16 @@
+.battery {
+	margin: .15em 0em .15em 0em;
+    padding: 0em 1em 0em 1em;
+
+
+    background-color: $darker-background;
+		border-top-left-radius: 0px;
+		border-bottom-left-radius: 0px;
+		border-top-right-radius: 12px;
+		border-bottom-right-radius: 12px;
+
+    .battery-icon {
+	    margin: .15em 0em .15em 0em;
+        padding: 0em 1.15em 0em 0em;
+    }
+}

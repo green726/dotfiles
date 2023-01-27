@@ -1,0 +1,39 @@
+(defwidget info-center []
+	(box :class "info-center-window" :space-evenly "false" :orientation "v"
+		(box :class "info-center-spacer" :style {icenter ? "padding-bottom: 0em;" : "padding-bottom: 43em;"})
+		(box :class "info-center" :orientation "v" :space-evenly "false"
+			(box :class "first-row" :orientation "h" :space-evenly "false"
+				(box :class "first-column" :orientation "v" :space-evenly "false"
+					(box :class "uptime-box" :orientation "v" :space-evenly "false"
+						(label :class "uptime-title" :halign "start" :text "Uptime")
+						(label :class "uptime-value" :halign "start" :text uptime)
+					)
+					(box :class "network-box" :orientation "v" :space-evenly "false"
+						(label :class "network-title" :halign "start" :text "Network")
+						(label :class "network-value" :halign "start" :limit-width 17 :text network_name)
+					)
+				)
+			)
+			(box :class "calendar" :orientation "v"
+				(box :class "cal-box"
+					:orientation "v"
+					:space-evenly "false"
+					(label :class "month-year" :text month_year)
+					(box :class "day-names" :orientation "h" :space-evenly "true"
+						(label :text "Su")
+						(label :text "Mo")
+						(label :text "Tu")
+						(label :text "We")
+						(label :text "Th")
+						(label :text "Fr")
+						(label :text "Sa")
+					)
+					(calendar :class "cal" 
+						:show-details false :show-heading false :show-day-names false
+						:day calendar_day :month calendar_month :year calendar_year)
+				)
+			)
+		)
+	)
+)
+(defvar icenter false)

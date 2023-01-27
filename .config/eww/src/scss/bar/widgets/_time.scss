@@ -1,0 +1,15 @@
+.time {
+	font-family: "Fira Code Nerd Font";
+	font-weight: bold;
+	font-size: 1.3em;
+    background-color: $darker-background;
+    border-radius: 12px;
+    padding: .5em 1em .5em 1em;
+
+	margin: .5em 1em;
+
+	.time-sep {
+		margin-bottom: .25em;
+		color: $foreground-primary;
+	}
+}

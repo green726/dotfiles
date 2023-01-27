@@ -1,0 +1,18 @@
+window {
+	button:hover {
+		color: $accent;
+	}
+
+	.eww-bar {
+		// background-color: $darker-background;
+		// border-radius: 10px 10px 0px 0px;
+		font-family: "Fira Code Nerd Font";
+		font-weight: normal;
+        // border-radius: 12px;
+	}
+	
+	.separator {
+		color: $lighter-background;
+		font-size: 2em;
+	}
+}

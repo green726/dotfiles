@@ -1,0 +1,10 @@
+(defwindow info-center
+	:geometry (geometry :x "0%"
+						:y "59%" 
+						:width "0%" 
+						:height "40%"
+						:anchor "bottom center")
+	:windowtype "dock"
+	:wm-ignore false
+    :monitor 0
+	(info-center))
