@@ -4,9 +4,15 @@
 
 # [[ $- == *i* ]] && source /usr/share/blesh/ble.sh --noattach
 
+export GTK_THEME=Catpuccin-Macchiato-Standard-Maroon-Dark
 
 export VISUAL=nvim
 export EDITOR="$VISUAL"
+
+
+if [ "$XDG_SESSION_TYPE" == "wayland" ]; then
+    export MOZ_ENABLE_WAYLAND=1
+fi
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
